@@ -380,14 +380,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif query.data == "start":
         await query.answer('Welcome!')
         buttons = [[
-            InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+            InlineKeyboardButton("◆ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ◆", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
         ],[
-            InlineKeyboardButton('🔎 Inline Search 🔍', switch_inline_query_current_chat='')
+            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://telegram.me/MdiskShortner_Link'),
+            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://telegram.me/Mdiskshortner_Chat_Bot')
         ],[
-            InlineKeyboardButton('👑 My Owner 👑', callback_data='my_owner'),
-            InlineKeyboardButton('ℹ️ My About ℹ️', callback_data='my_about')
-        ],[
-            InlineKeyboardButton('❌ Close ❌', callback_data='close_data')
+            InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ', callback_data='earn')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -406,10 +404,21 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
+    elif query.data == "earn":
+        buttons = [[
+            InlineKeyboardButton('Back', callback_data='start'),
+            InlineKeyboardButton('Report', url=SUPPORT_LINK)
+        ]]
+        reply_markup = InlineKeyboardMarkup(buttons)
+        await query.message.edit_text(
+            text=script.EARN_TXT,
+            reply_markup=reply_markup,
+            parse_mode=enums.ParseMode.HTML
+        )
     elif query.data == "my_owner":
         buttons = [[
             InlineKeyboardButton('🏠 Home 🏠', callback_data='start'),
-            InlineKeyboardButton('Contact', url='https://t.me/Hansaka_Anuhas')
+            InlineKeyboardButton('Contact', url='https://t.me/Mdiskshortner_Chat_Bot')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
