@@ -40,3 +40,26 @@ class script(object):
 ★ ID: <code>{}</code>
 
 ★ Message: {}"""
+
+    
+    EARN_TXT = """☞ Now you can connect your shortner directly 
+
+☞ Now your shortner works in send all files button
+
+☞ You Check Your shortner information by using <code>/get_shortlink</code> command
+
+☞ Settings option added you can change settings as your wish [ /settings ]
+
+Commands ♻️
+
+/set_shortlink - your shortlink name & api
+
+Examples 📌📌
+
+<code>/set_shortlink mdiskshortner.link 8fbd5121 bc2d1fb5debfc2c8f685d69ee28c3a2e</code>"""
+    
+    
+    
+    
+    
+    
