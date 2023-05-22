@@ -44,12 +44,17 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.NEW_USER_TXT.format(message.from_user.mention, message.from_user.id))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('✅ Start ✅', callback_data='start')
+            InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+        ],[
+            InlineKeyboardButton('🔎 Inline Search 🔍', switch_inline_query_current_chat='')
+        ],[
+            InlineKeyboardButton('👑 My Owner 👑', callback_data='my_owner'),
+            InlineKeyboardButton('ℹ️ My About ℹ️', callback_data='my_about')
+        ],[
+            InlineKeyboardButton('❌ Close ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=f"👋 Hello {message.from_user.mention}",
+        await message.reply_text(f"👋 Hello {message.from_user.mention}",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -80,12 +85,17 @@ async def start(client, message):
         return
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help", "start", "admins"]:
         buttons = [[
-            InlineKeyboardButton('✅ Start ✅', callback_data='start')
+            InlineKeyboardButton("➕ Add Me To Your Group ➕", url=f'http://t.me/{temp.U_NAME}?startgroup=start')
+        ],[
+            InlineKeyboardButton('🔎 Inline Search 🔍', switch_inline_query_current_chat='')
+        ],[
+            InlineKeyboardButton('👑 My Owner 👑', callback_data='my_owner'),
+            InlineKeyboardButton('ℹ️ My About ℹ️', callback_data='my_about')
+        ],[
+            InlineKeyboardButton('❌ Close ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(
-            photo=random.choice(PICS),
-            caption=f"👋 Hello {message.from_user.mention}",
+        await message.reply_text(f"👋 Hello {message.from_user.mention}",
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
