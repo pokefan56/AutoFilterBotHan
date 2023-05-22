@@ -57,7 +57,7 @@ async def start(client, message):
         m=await message.reply_text("<b>ωαιт вяσ</b>") 
         await asyncio.sleep(0.2)
         await m.delete()
-        await message.reply_text(script.START_TXT.format,
+        await message.reply(script.START_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -101,7 +101,7 @@ async def start(client, message):
         m=await message.reply_text("<b>ωαιт вяσ</b>") 
         await asyncio.sleep(0.2)
         await m.delete()
-        await message.reply_text(script.START_TXT.format,
+        await message.reply(script.START_TXT,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
