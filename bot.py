@@ -47,6 +47,7 @@ class Bot(Client):
         async for chat in chats:
             try:
                 await self.send_message(chat_id=chat['id'], text="Bot Restarted! 🤖")
+                await self.send_message(ADMINS, text='Bot Restarted ✅️')
             except:
                 pass
 
