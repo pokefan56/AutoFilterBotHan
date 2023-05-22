@@ -54,7 +54,7 @@ async def start(client, message):
             InlineKeyboardButton('❌ Close ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(f"👋 Hello {message.from_user.mention}",
+        await message.reply_text(script.START_TXT.format,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
@@ -95,7 +95,7 @@ async def start(client, message):
             InlineKeyboardButton('❌ Close ❌', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_text(f"👋 Hello {message.from_user.mention}",
+        await message.reply_text(script.START_TXT.format,
             reply_markup=reply_markup,
             parse_mode=enums.ParseMode.HTML
         )
