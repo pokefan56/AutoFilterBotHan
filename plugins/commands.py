@@ -48,6 +48,8 @@ async def start(client, message):
         ],[
             InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://telegram.me/MdiskShortner_Link'),
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://telegram.me/Mdiskshortner_Chat_Bot')
+        ],[
+            InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ', callback_data='earn')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT,
@@ -85,6 +87,8 @@ async def start(client, message):
         ],[
             InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://telegram.me/MdiskShortner_Link'),
             InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://telegram.me/Mdiskshortner_Chat_Bot')
+        ],[
+            InlineKeyboardButton('ᴇᴀʀɴ ᴍᴏɴᴇʏ ʙʏ ʙᴏᴛ', callback_data='earn')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.START_TXT,
