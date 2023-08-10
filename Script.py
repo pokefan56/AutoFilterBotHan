@@ -8,7 +8,7 @@ class script(object):
 ★ Library: <a href=https://pyrogram.org>Pyrogram</a>"""
 
     MY_OWNER_TXT = """★ Name: detective Conan
-★ Username: @Hansaka_Anuhas
+★ Username: @Conan830
 ★ ID: <code>1956698956</code>
 ★ Country: India 🇮🇳"""
 
